@@ -20,7 +20,7 @@ cComXbee::cComXbee(QObject *parent) : QObject(parent)
         qDebug() << "Regex non valide";
     }
 
-    connect(&serialPort, &QSerialPort::errorOccurred, this, &cComXbee::on_error);
+    //connect(&serialPort, &QSerialPort::errorOccurred, this, &cComXbee::on_error);
     connect(&serialPort, &QSerialPort::readyRead, this, &cComXbee::on_lireXbee);
 
     if (serialPort.open(QIODevice::ReadWrite))
