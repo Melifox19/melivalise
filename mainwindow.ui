@@ -16,28 +16,77 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="1">
-     <widget class="QGroupBox" name="groupBox">
+     <widget class="QGroupBox" name="gb_essaimage">
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
       <property name="title">
        <string>Essaimage</string>
       </property>
      </widget>
     </item>
     <item row="0" column="0">
-     <widget class="QGroupBox" name="groupBox_2">
+     <widget class="QGroupBox" name="gb_general">
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
       <property name="title">
        <string>Général</string>
       </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>120</y>
+         <width>131</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Foo</string>
+       </property>
+      </widget>
      </widget>
     </item>
     <item row="1" column="0">
-     <widget class="QGroupBox" name="groupBox_3">
+     <widget class="QGroupBox" name="gb_temperature_interieur">
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <property name="title">
        <string>Température Intérieur</string>
       </property>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>130</y>
+         <width>121</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Bar</string>
+       </property>
+      </widget>
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QGroupBox" name="groupBox_4">
+     <widget class="QGroupBox" name="gb_temperature_exterieur">
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
       <property name="title">
        <string>Température Extérieur</string>
       </property>
