@@ -10,5 +10,5 @@ Script bash ajoutant le groupe de l'utilisateur aux TTYUSB détectés sur la mac
 
 # BUGS
 
-* Le programme ne compile pas sur Raspberry Pi, le slot *errorOccurred* n'est pas supporté
+Voir section Issues.
 
