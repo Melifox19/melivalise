@@ -11,6 +11,6 @@ int main(int argc, char *argv[])
     cComXbee comXbee;
 
     MainWindow w;
-    w.show();
+    w.showMaximized();
     return a.exec();
 }
