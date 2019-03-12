@@ -42,7 +42,7 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QCheckBox" name="checkBox">
+        <widget class="QCheckBox" name="ckb_200">
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -54,7 +54,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QCheckBox" name="checkBox_2">
+        <widget class="QCheckBox" name="ckb_400">
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -69,7 +69,7 @@
      </widget>
     </item>
     <item row="1" column="0">
-     <widget class="QGroupBox" name="gb_temperature_interieur">
+     <widget class="QGroupBox" name="gb_interieur">
       <property name="font">
        <font>
         <pointsize>12</pointsize>
@@ -83,7 +83,7 @@
       </property>
       <layout class="QGridLayout" name="gridLayout_4">
        <item row="1" column="5">
-        <widget class="QPushButton" name="pushButton_19">
+        <widget class="QPushButton" name="pb_int_temp_moins_1">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -107,7 +107,7 @@
         </widget>
        </item>
        <item row="3" column="2">
-        <widget class="QPushButton" name="pushButton_22">
+        <widget class="QPushButton" name="pb_int_hygro_plus_1">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -131,7 +131,7 @@
         </widget>
        </item>
        <item row="1" column="2">
-        <widget class="QPushButton" name="pushButton_16">
+        <widget class="QPushButton" name="pb_int_temp_plus_1">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -155,7 +155,7 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QPushButton" name="pushButton_15">
+        <widget class="QPushButton" name="pb_int_temp_plus_10">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -179,7 +179,7 @@
         </widget>
        </item>
        <item row="3" column="6">
-        <widget class="QPushButton" name="pushButton_26">
+        <widget class="QPushButton" name="pb_int_hygro_moins_10">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -203,7 +203,7 @@
         </widget>
        </item>
        <item row="1" column="6">
-        <widget class="QPushButton" name="pushButton_20">
+        <widget class="QPushButton" name="pb_int_temp_moins_10">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -227,7 +227,7 @@
         </widget>
        </item>
        <item row="3" column="5">
-        <widget class="QPushButton" name="pushButton_25">
+        <widget class="QPushButton" name="pb_int_hygro_moins_1">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -251,7 +251,7 @@
         </widget>
        </item>
        <item row="3" column="4">
-        <widget class="QPushButton" name="pushButton_24">
+        <widget class="QPushButton" name="pb_int_hygro_moins_01">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -275,7 +275,7 @@
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QPushButton" name="pushButton_21">
+        <widget class="QPushButton" name="pb_int_hygro_plus_10">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -299,7 +299,7 @@
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QDoubleSpinBox" name="doubleSpinBox_3">
+        <widget class="QDoubleSpinBox" name="sb_interieur_temperature">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -335,7 +335,7 @@
         </widget>
        </item>
        <item row="3" column="0">
-        <widget class="QDoubleSpinBox" name="doubleSpinBox_4">
+        <widget class="QDoubleSpinBox" name="sb_interieur_hygrometrie">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -371,7 +371,7 @@
         </widget>
        </item>
        <item row="1" column="3">
-        <widget class="QPushButton" name="pushButton_17">
+        <widget class="QPushButton" name="pb_int_temp_plus_01">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -395,7 +395,7 @@
         </widget>
        </item>
        <item row="3" column="3">
-        <widget class="QPushButton" name="pushButton_23">
+        <widget class="QPushButton" name="pb_int_hygro_01">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -419,7 +419,7 @@
         </widget>
        </item>
        <item row="1" column="4">
-        <widget class="QPushButton" name="pushButton_18">
+        <widget class="QPushButton" name="pb_int_temp_moins_01">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -443,14 +443,14 @@
         </widget>
        </item>
        <item row="0" column="0" colspan="2">
-        <widget class="QLabel" name="label_4">
+        <widget class="QLabel" name="lb_int_temp">
          <property name="text">
           <string>Température</string>
          </property>
         </widget>
        </item>
        <item row="2" column="0" colspan="2">
-        <widget class="QLabel" name="label_5">
+        <widget class="QLabel" name="lb_int_hygro">
          <property name="text">
           <string>Hygrométrie</string>
          </property>
@@ -471,7 +471,7 @@
       </property>
       <layout class="QGridLayout" name="gridLayout_2">
        <item row="1" column="1">
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="pb_numero_plus_1">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -495,7 +495,7 @@
         </widget>
        </item>
        <item row="3" column="5">
-        <widget class="QPushButton" name="pushButton_5">
+        <widget class="QPushButton" name="pb_poids_moins_1">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -519,7 +519,7 @@
         </widget>
        </item>
        <item row="3" column="0">
-        <widget class="QDoubleSpinBox" name="doubleSpinBox">
+        <widget class="QDoubleSpinBox" name="sb_poids">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -555,7 +555,7 @@
         </widget>
        </item>
        <item row="3" column="6">
-        <widget class="QPushButton" name="pushButton_6">
+        <widget class="QPushButton" name="pb_poids_moins_10">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -579,7 +579,7 @@
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="pb_poids_plus_10">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -603,7 +603,7 @@
         </widget>
        </item>
        <item row="3" column="2">
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="pb_poids_plus_1">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -627,7 +627,7 @@
         </widget>
        </item>
        <item row="3" column="4">
-        <widget class="QPushButton" name="pushButton_8">
+        <widget class="QPushButton" name="pb_poids_moins_01">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -651,7 +651,7 @@
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QSpinBox" name="spinBox">
+        <widget class="QSpinBox" name="sb_numero">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -693,7 +693,7 @@
         </widget>
        </item>
        <item row="5" column="0">
-        <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
+        <widget class="QDoubleSpinBox" name="sb_batterie">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -729,7 +729,7 @@
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QPushButton" name="pushButton_9">
+        <widget class="QPushButton" name="pb_batterie_plus_10">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -753,7 +753,7 @@
         </widget>
        </item>
        <item row="5" column="2">
-        <widget class="QPushButton" name="pushButton_10">
+        <widget class="QPushButton" name="pb_batterie_plus_1">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -777,7 +777,7 @@
         </widget>
        </item>
        <item row="5" column="3">
-        <widget class="QPushButton" name="pushButton_11">
+        <widget class="QPushButton" name="pb_batterie_plus_01">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -801,7 +801,7 @@
         </widget>
        </item>
        <item row="5" column="4">
-        <widget class="QPushButton" name="pushButton_12">
+        <widget class="QPushButton" name="pb_batterie_moins_01">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -825,7 +825,7 @@
         </widget>
        </item>
        <item row="5" column="5">
-        <widget class="QPushButton" name="pushButton_13">
+        <widget class="QPushButton" name="pb_batterie_moins_1">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -849,7 +849,7 @@
         </widget>
        </item>
        <item row="5" column="6">
-        <widget class="QPushButton" name="pushButton_14">
+        <widget class="QPushButton" name="pb_batterie_moins_10">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -873,7 +873,7 @@
         </widget>
        </item>
        <item row="0" column="0" colspan="2">
-        <widget class="QLabel" name="label">
+        <widget class="QLabel" name="lb_numero_meliruche">
          <property name="font">
           <font>
            <pointsize>12</pointsize>
@@ -885,7 +885,7 @@
         </widget>
        </item>
        <item row="2" column="0" colspan="2">
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="lb_poids">
          <property name="font">
           <font>
            <pointsize>12</pointsize>
@@ -897,7 +897,7 @@
         </widget>
        </item>
        <item row="4" column="0" colspan="2">
-        <widget class="QLabel" name="label_3">
+        <widget class="QLabel" name="lb_batterie">
          <property name="font">
           <font>
            <pointsize>12</pointsize>
@@ -909,7 +909,7 @@
         </widget>
        </item>
        <item row="3" column="3">
-        <widget class="QPushButton" name="pushButton_7">
+        <widget class="QPushButton" name="pb_poids_plus_01">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -933,7 +933,7 @@
         </widget>
        </item>
        <item row="1" column="2">
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="pb_numero_moins_1">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -960,7 +960,7 @@
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QGroupBox" name="gb_temperature_exterieur">
+     <widget class="QGroupBox" name="gb_exterieur">
       <property name="font">
        <font>
         <pointsize>12</pointsize>
@@ -971,7 +971,7 @@
       </property>
       <layout class="QGridLayout" name="gridLayout_5">
        <item row="3" column="6">
-        <widget class="QPushButton" name="pushButton_36">
+        <widget class="QPushButton" name="lb_ext_hygro_moins_01">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -995,7 +995,7 @@
         </widget>
        </item>
        <item row="3" column="8">
-        <widget class="QPushButton" name="pushButton_38">
+        <widget class="QPushButton" name="lb_ext_hygro_moins_10">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -1019,7 +1019,7 @@
         </widget>
        </item>
        <item row="1" column="6">
-        <widget class="QPushButton" name="pushButton_30">
+        <widget class="QPushButton" name="pb_ext_temp_moins_01">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -1043,7 +1043,7 @@
         </widget>
        </item>
        <item row="3" column="0">
-        <widget class="QDoubleSpinBox" name="doubleSpinBox_6">
+        <widget class="QDoubleSpinBox" name="sb_exterieur_hygrometrie">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -1079,7 +1079,7 @@
         </widget>
        </item>
        <item row="1" column="7">
-        <widget class="QPushButton" name="pushButton_31">
+        <widget class="QPushButton" name="pb_ext_temp_moins_1">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -1103,7 +1103,7 @@
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QDoubleSpinBox" name="doubleSpinBox_5">
+        <widget class="QDoubleSpinBox" name="sb_exterieur_temperature">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -1139,7 +1139,7 @@
         </widget>
        </item>
        <item row="3" column="7">
-        <widget class="QPushButton" name="pushButton_37">
+        <widget class="QPushButton" name="lb_ext_hygro_moins_1">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -1163,7 +1163,7 @@
         </widget>
        </item>
        <item row="1" column="8">
-        <widget class="QPushButton" name="pushButton_32">
+        <widget class="QPushButton" name="pb_ext_temp_moins_10">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -1187,7 +1187,7 @@
         </widget>
        </item>
        <item row="3" column="4">
-        <widget class="QPushButton" name="pushButton_35">
+        <widget class="QPushButton" name="lb_ext_hygro_plus_01">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -1211,7 +1211,7 @@
         </widget>
        </item>
        <item row="1" column="4">
-        <widget class="QPushButton" name="pushButton_29">
+        <widget class="QPushButton" name="pb_ext_temp_plus_01">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -1235,7 +1235,7 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QPushButton" name="pushButton_27">
+        <widget class="QPushButton" name="pb_ext_temp_plus_10">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -1259,7 +1259,7 @@
         </widget>
        </item>
        <item row="1" column="2">
-        <widget class="QPushButton" name="pushButton_28">
+        <widget class="QPushButton" name="pb_ext_temp_plus_1">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -1283,7 +1283,7 @@
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QPushButton" name="pushButton_33">
+        <widget class="QPushButton" name="lb_ext_hygro_plus_10">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -1307,7 +1307,7 @@
         </widget>
        </item>
        <item row="3" column="2">
-        <widget class="QPushButton" name="pushButton_34">
+        <widget class="QPushButton" name="lb_ext_hygro_plus_1">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -1331,14 +1331,14 @@
         </widget>
        </item>
        <item row="2" column="0" colspan="3">
-        <widget class="QLabel" name="label_7">
+        <widget class="QLabel" name="lb_ext_hygro">
          <property name="text">
           <string>Hygrométrie</string>
          </property>
         </widget>
        </item>
        <item row="0" column="0" colspan="3">
-        <widget class="QLabel" name="label_6">
+        <widget class="QLabel" name="lb_ext_temp">
          <property name="text">
           <string>Température</string>
          </property>
