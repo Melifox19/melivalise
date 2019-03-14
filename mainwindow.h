@@ -36,10 +36,6 @@ private slots:
 
     void on_pb_batterie_plus_1_released();
 
-    void on_pb_batterie_plus_01_released();
-
-    void on_pb_batterie_moins_01_released();
-
     void on_pb_batterie_moins_1_released();
 
     void on_pb_batterie_moins_10_released();

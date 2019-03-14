@@ -61,17 +61,6 @@ void MainWindow::on_pb_batterie_plus_1_released()
 {
    ui->sb_batterie->setValue(ui->sb_batterie->value() + 1);
 }
-
-void MainWindow::on_pb_batterie_plus_01_released()
-{
-   ui->sb_batterie->setValue(ui->sb_batterie->value() + 0.1);
-}
-
-void MainWindow::on_pb_batterie_moins_01_released()
-{
-   ui->sb_batterie->setValue(ui->sb_batterie->value() - 0.1);
-}
-
 void MainWindow::on_pb_batterie_moins_1_released()
 {
    ui->sb_batterie->setValue(ui->sb_batterie->value() - 1);

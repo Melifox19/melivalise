@@ -95,30 +95,6 @@
            <string>Général</string>
           </property>
           <layout class="QGridLayout" name="gridLayout_2">
-           <item row="1" column="1">
-            <widget class="QPushButton" name="pb_numero_plus_1">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>40</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>+1</string>
-             </property>
-            </widget>
-           </item>
            <item row="3" column="5">
             <widget class="QPushButton" name="pb_poids_moins_1">
              <property name="sizePolicy">
@@ -165,11 +141,17 @@
              <property name="alignment">
               <set>Qt::AlignCenter</set>
              </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
              <property name="buttonSymbols">
               <enum>QAbstractSpinBox::NoButtons</enum>
              </property>
              <property name="suffix">
               <string>kg</string>
+             </property>
+             <property name="decimals">
+              <number>1</number>
              </property>
              <property name="maximum">
               <double>200.000000000000000</double>
@@ -339,11 +321,17 @@
              <property name="alignment">
               <set>Qt::AlignCenter</set>
              </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
              <property name="buttonSymbols">
               <enum>QAbstractSpinBox::NoButtons</enum>
              </property>
              <property name="suffix">
               <string>%</string>
+             </property>
+             <property name="decimals">
+              <number>0</number>
              </property>
              <property name="maximum">
               <double>100.000000000000000</double>
@@ -398,102 +386,6 @@
              </property>
              <property name="text">
               <string>+1</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="3">
-            <widget class="QPushButton" name="pb_batterie_plus_01">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>40</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>+0.1</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="4">
-            <widget class="QPushButton" name="pb_batterie_moins_01">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>40</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>-0.1</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="5">
-            <widget class="QPushButton" name="pb_batterie_moins_1">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>40</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>-1</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="6">
-            <widget class="QPushButton" name="pb_batterie_moins_10">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>40</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>-10</string>
              </property>
             </widget>
            </item>
@@ -557,7 +449,55 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="2">
+           <item row="5" column="6">
+            <widget class="QPushButton" name="pb_batterie_moins_10">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>40</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>-10</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="5">
+            <widget class="QPushButton" name="pb_batterie_moins_1">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>40</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>-1</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="5">
             <widget class="QPushButton" name="pb_numero_moins_1">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
@@ -578,6 +518,30 @@
              </property>
              <property name="text">
               <string>-1</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="pb_numero_plus_1">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>40</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>+1</string>
              </property>
             </widget>
            </item>
@@ -836,17 +800,23 @@
              <property name="alignment">
               <set>Qt::AlignCenter</set>
              </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
              <property name="buttonSymbols">
               <enum>QAbstractSpinBox::NoButtons</enum>
              </property>
              <property name="suffix">
-              <string>%</string>
+              <string>°C</string>
+             </property>
+             <property name="decimals">
+              <number>1</number>
              </property>
              <property name="maximum">
               <double>100.000000000000000</double>
              </property>
              <property name="value">
-              <double>90.000000000000000</double>
+              <double>25.000000000000000</double>
              </property>
             </widget>
            </item>
@@ -875,8 +845,14 @@
              <property name="buttonSymbols">
               <enum>QAbstractSpinBox::NoButtons</enum>
              </property>
+             <property name="accelerated">
+              <bool>true</bool>
+             </property>
              <property name="suffix">
               <string>%</string>
+             </property>
+             <property name="decimals">
+              <number>1</number>
              </property>
              <property name="maximum">
               <double>100.000000000000000</double>
@@ -1083,8 +1059,14 @@
              <property name="buttonSymbols">
               <enum>QAbstractSpinBox::NoButtons</enum>
              </property>
+             <property name="accelerated">
+              <bool>false</bool>
+             </property>
              <property name="suffix">
               <string>%</string>
+             </property>
+             <property name="decimals">
+              <number>1</number>
              </property>
              <property name="maximum">
               <double>100.000000000000000</double>
@@ -1143,14 +1125,20 @@
              <property name="buttonSymbols">
               <enum>QAbstractSpinBox::NoButtons</enum>
              </property>
+             <property name="accelerated">
+              <bool>true</bool>
+             </property>
              <property name="suffix">
-              <string>%</string>
+              <string>°C</string>
+             </property>
+             <property name="decimals">
+              <number>1</number>
              </property>
              <property name="maximum">
               <double>100.000000000000000</double>
              </property>
              <property name="value">
-              <double>90.000000000000000</double>
+              <double>25.000000000000000</double>
              </property>
             </widget>
            </item>
