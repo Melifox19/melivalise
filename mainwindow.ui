@@ -842,11 +842,14 @@
              <property name="alignment">
               <set>Qt::AlignCenter</set>
              </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
              <property name="buttonSymbols">
               <enum>QAbstractSpinBox::NoButtons</enum>
              </property>
              <property name="accelerated">
-              <bool>true</bool>
+              <bool>false</bool>
              </property>
              <property name="suffix">
               <string>%</string>
@@ -1056,6 +1059,9 @@
              <property name="alignment">
               <set>Qt::AlignCenter</set>
              </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
              <property name="buttonSymbols">
               <enum>QAbstractSpinBox::NoButtons</enum>
              </property>
@@ -1122,11 +1128,14 @@
              <property name="alignment">
               <set>Qt::AlignCenter</set>
              </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
              <property name="buttonSymbols">
               <enum>QAbstractSpinBox::NoButtons</enum>
              </property>
              <property name="accelerated">
-              <bool>true</bool>
+              <bool>false</bool>
              </property>
              <property name="suffix">
               <string>°C</string>
