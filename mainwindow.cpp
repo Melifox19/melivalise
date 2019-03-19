@@ -6,6 +6,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    // Affichage du non support des journaux dans le GUI
+    ui->pte_jounaux->appendPlainText("Pour obtenir les journaux, se référer au terminal.");
+    ui->pte_jounaux->appendPlainText("Cette application ne supporte pas encore les journaux.");
 }
 
 MainWindow::~MainWindow()
