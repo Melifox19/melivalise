@@ -17,11 +17,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
     ccomxbee.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    ccomobjet.cpp
 
 HEADERS += \
     ccomxbee.h \
-    mainwindow.h
+    mainwindow.h \
+    ccomobjet.h
 
 FORMS += \
     mainwindow.ui
