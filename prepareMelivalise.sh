@@ -19,8 +19,8 @@ sudo chown :$USER /dev/ttyUSB*
 
 if [[ $(ls -l /dev/ttyUSB* | grep $USER) ]]
 then
-    echo "Tout est bon !"
+    echo "[SUCCÈS] Tout est bon !"
 else
-    echo "[ERREUR] Aucun module n'est affecté à l'utilisateur $USER"
+    echo "[ERREUR] Un problème a été rencontré lors de l'affectation."
 fi
 
