@@ -5,7 +5,9 @@
 
 if [[ $(ls -l /dev/ttyUSB* 2> /dev/null) ]]
 then
-    ls -l /dev/ttyUSB* | awk '{print $10}'
+    echo "Liste des modules trouvés en port série usb :"
+    ls -l /dev/ttyUSB* | awk '{print "    - " $10}'
+    echo ""
 else
     echo "[ERREUR] Aucun module trouvé en port série usb !"
     exit 1
