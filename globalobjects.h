@@ -3,6 +3,6 @@
 
 #include <ccomobjet.h>
 
-cComObjet *tunnel = new cComObjet;
+extern cComObjet *tunnel;
 
 #endif // GLOBALOBJECTS_H

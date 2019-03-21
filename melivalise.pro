@@ -18,7 +18,8 @@ SOURCES += \
         main.cpp \
     ccomxbee.cpp \
     mainwindow.cpp \
-    ccomobjet.cpp
+    ccomobjet.cpp \
+    globalobjects.cpp
 
 HEADERS += \
     ccomxbee.h \
