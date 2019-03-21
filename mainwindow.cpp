@@ -12,6 +12,23 @@ MainWindow::MainWindow(QWidget *parent) :
     // Affichage du non support des journaux dans le GUI
     ui->pte_jounaux->appendPlainText("Pour obtenir les journaux, se référer au terminal.");
     ui->pte_jounaux->appendPlainText("Cette application ne supporte pas encore les journaux.");
+
+    // Affectation des valeurs par celles du tunnel
+    ui->sb_numero->setValue(tunnel->getNumero());
+    ui->sb_poids->setValue(tunnel->getPoids());
+    ui->sb_batterie->setValue(tunnel->getBatterie());
+    ui->sb_interieur_temperature->setValue(tunnel->getInterieurTemperature());
+    ui->sb_interieur_hygrometrie->setValue(tunnel->getInterieurHygrometrie());
+    ui->sb_exterieur_temperature->setValue(tunnel->getExterieurTemperature());
+    ui->sb_exterieur_hygrometrie->setValue(tunnel->getExterieurHygrometrie());
+    if (tunnel->getEssaimage200() == true)
+        ui->ckb_200->setChecked(true);
+    else
+        ui->ckb_200->setChecked(false);
+    if (tunnel->getEssaimage400() == true)
+        ui->ckb_400->setChecked(true);
+    else
+        ui->ckb_400->setChecked(false);
 }
 
 MainWindow::~MainWindow()
