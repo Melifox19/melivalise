@@ -74,3 +74,23 @@ double cComObjet::getExterieurHygrometrie()
 {
     return this->exterieurHygrometrie;
 }
+
+void cComObjet::setEssaimage200(bool essaimage)
+{
+   this->essaimage200 = essaimage;
+}
+
+bool cComObjet::getEssaimage200()
+{
+    return this->essaimage200;
+}
+
+void cComObjet::setEssaimage400(bool essaimage)
+{
+    this->essaimage400 = essaimage;
+}
+
+bool cComObjet::getEssaimage400()
+{
+    return this->essaimage400;
+}

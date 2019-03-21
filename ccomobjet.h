@@ -9,24 +9,29 @@ class cComObjet : public QObject
 public:
     cComObjet(QObject *parent = nullptr);
 
-    void setNumero               (int numero);
-    int  getNumero               ();
+    void    setNumero               (int numero);
+    int     getNumero               ();
 
-    void setPoids                (double poids);
+    void    setPoids                   (double poids);
     double  getPoids                ();
 
-    void setBatterie             (double batterie);
+    void    setBatterie             (double batterie);
     double  getBatterie             ();
 
-    void setInterieurTemperature (double temperature);
+    void    setInterieurTemperature (double temperature);
     double  getInterieurTemperature ();
-    void setInterieurHygrometrie (double hygrometrie);
+    void    setInterieurHygrometrie (double hygrometrie);
     double  getInterieurHygrometrie ();
 
-    void setExterieurTemperature (double temperature);
+    void    setExterieurTemperature (double temperature);
     double  getExterieurTemperature ();
-    void setExterieurHygrometrie (double hygrometrie);
+    void    setExterieurHygrometrie (double hygrometrie);
     double  getExterieurHygrometrie ();
+
+    void    setEssaimage200         (bool essaimage);
+    bool    getEssaimage200         ();
+    void    setEssaimage400         (bool essaimage);
+    bool    getEssaimage400         ();
 
 private:
     int    numero               = 1;
@@ -36,6 +41,8 @@ private:
     double interieurHygrometrie = 90;
     double exterieurTemperature = 25;
     double exterieurHygrometrie = 90;
+    bool   essaimage200         = false;
+    bool   essaimage400         = false;
 };
 
 #endif // COMOBJET_H
