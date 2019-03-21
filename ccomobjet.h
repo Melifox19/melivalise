@@ -29,9 +29,9 @@ public:
     double  getExterieurHygrometrie ();
 
 private:
-    int numero                  = 1;
+    int    numero               = 1;
     double poids                = 85;
-    double batterie             = 90;
+    int    batterie             = 90;
     double interieurTemperature = 20;
     double interieurHygrometrie = 90;
     double exterieurTemperature = 25;
