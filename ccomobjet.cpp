@@ -15,62 +15,62 @@ int cComObjet::getNumero()
     return this->numero;
 }
 
-void cComObjet::setPoids(int poids)
+void cComObjet::setPoids(float poids)
 {
     this->poids = poids;
 }
 
-int cComObjet::getPoids()
+float cComObjet::getPoids()
 {
     return this->poids;
 }
 
-void cComObjet::setBatterie(int batterie)
+void cComObjet::setBatterie(float batterie)
 {
     this->batterie = batterie;
 }
 
-int cComObjet::getBatterie()
+float cComObjet::getBatterie()
 {
     return this->batterie;
 }
 
-void cComObjet::setInterieurTemperature(int temperature)
+void cComObjet::setInterieurTemperature(float temperature)
 {
     this->interieurTemperature = temperature;
 }
 
-int cComObjet::getInterieurTemperature()
+float cComObjet::getInterieurTemperature()
 {
     return this->interieurTemperature;
 }
 
-void cComObjet::setInterieurHygrometrie(int hygrometrie)
+void cComObjet::setInterieurHygrometrie(float hygrometrie)
 {
     this->interieurHygrometrie = hygrometrie;
 }
 
-int cComObjet::getInterieurHygrometrie()
+float cComObjet::getInterieurHygrometrie()
 {
     return this->interieurHygrometrie;
 }
 
-void cComObjet::setExterieurTemperature(int temperature)
+void cComObjet::setExterieurTemperature(float temperature)
 {
     this->exterieurTemperature = temperature;
 }
 
-int cComObjet::getExterieurTemperature()
+float cComObjet::getExterieurTemperature()
 {
     return  this->exterieurTemperature;
 }
 
-void cComObjet::setExterieurHygrometrie(int hygrometrie)
+void cComObjet::setExterieurHygrometrie(float hygrometrie)
 {
     this->exterieurHygrometrie = hygrometrie;
 }
 
-int cComObjet::getExterieurHygrometrie()
+float cComObjet::getExterieurHygrometrie()
 {
     return this->exterieurHygrometrie;
 }
