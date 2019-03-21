@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "globalobjects.h"
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -195,4 +196,70 @@ void MainWindow::on_lb_ext_hygro_moins_1_released()
 void MainWindow::on_lb_ext_hygro_moins_10_released()
 {
    ui->sb_exterieur_hygrometrie->setValue(ui->sb_exterieur_hygrometrie->value() - 10);
+}
+
+void MainWindow::on_sb_numero_valueChanged(int arg1)
+{
+   tunnel->setNumero(arg1);
+   qDebug() << "Numero :" << tunnel->getNumero();
+}
+
+void MainWindow::on_sb_poids_valueChanged(double arg1)
+{
+    tunnel->setPoids(arg1);
+    qDebug() << "Poids :" << tunnel->getPoids();
+}
+
+void MainWindow::on_sb_batterie_valueChanged(int arg1)
+{
+    tunnel->setBatterie(arg1);
+    qDebug() << "Batterie :" << tunnel->getBatterie();
+}
+
+void MainWindow::on_sb_interieur_temperature_valueChanged(double arg1)
+{
+   tunnel->setInterieurTemperature(arg1);
+   qDebug() << "Interieur Temperature :" << tunnel->getInterieurTemperature();
+}
+
+void MainWindow::on_sb_interieur_hygrometrie_valueChanged(double arg1)
+{
+    tunnel->setInterieurHygrometrie(arg1);
+    qDebug() << "Interieur Hygrometrie :" << tunnel->getInterieurHygrometrie();
+}
+
+void MainWindow::on_sb_exterieur_temperature_valueChanged(double arg1)
+{
+    tunnel->setExterieurTemperature(arg1);
+    qDebug() << "Exterieur Temperature :" << tunnel->getExterieurTemperature();
+}
+
+void MainWindow::on_sb_exterieur_hygrometrie_valueChanged(double arg1)
+{
+    tunnel->setExterieurHygrometrie(arg1);
+    qDebug() << "Exterieur Hygrometrie :" << tunnel->getExterieurHygrometrie();
+}
+
+void MainWindow::on_ckb_200_stateChanged(int arg1)
+{
+    if (arg1 == 2)
+    {
+        tunnel->setEssaimage200(true);
+    }
+    else {
+        tunnel->setEssaimage200(false);
+    }
+    qDebug() << "Essaimage 200 :" << tunnel->getEssaimage200();
+}
+
+void MainWindow::on_ckb_400_stateChanged(int arg1)
+{
+    if (arg1 == 2)
+    {
+        tunnel->setEssaimage400(true);
+    }
+    else {
+        tunnel->setEssaimage400(false);
+    }
+    qDebug() << "Essaimage 400 :" << tunnel->getEssaimage400();
 }

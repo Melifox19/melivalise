@@ -88,6 +88,24 @@ private slots:
 
     void on_lb_ext_hygro_moins_10_released();
 
+    void on_sb_numero_valueChanged(int arg1);
+
+    void on_sb_poids_valueChanged(double arg1);
+
+    void on_sb_batterie_valueChanged(int arg1);
+
+    void on_sb_interieur_temperature_valueChanged(double arg1);
+
+    void on_sb_interieur_hygrometrie_valueChanged(double arg1);
+
+    void on_sb_exterieur_temperature_valueChanged(double arg1);
+
+    void on_sb_exterieur_hygrometrie_valueChanged(double arg1);
+
+    void on_ckb_200_stateChanged(int arg1);
+
+    void on_ckb_400_stateChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
 };
