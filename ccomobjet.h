@@ -12,30 +12,30 @@ public:
     void setNumero               (int numero);
     int  getNumero               ();
 
-    void setPoids                (float poids);
-    float  getPoids                ();
+    void setPoids                (double poids);
+    double  getPoids                ();
 
-    void setBatterie             (float batterie);
-    float  getBatterie             ();
+    void setBatterie             (double batterie);
+    double  getBatterie             ();
 
-    void setInterieurTemperature (float temperature);
-    float  getInterieurTemperature ();
-    void setInterieurHygrometrie (float hygrometrie);
-    float  getInterieurHygrometrie ();
+    void setInterieurTemperature (double temperature);
+    double  getInterieurTemperature ();
+    void setInterieurHygrometrie (double hygrometrie);
+    double  getInterieurHygrometrie ();
 
-    void setExterieurTemperature (float temperature);
-    float  getExterieurTemperature ();
-    void setExterieurHygrometrie (float hygrometrie);
-    float  getExterieurHygrometrie ();
+    void setExterieurTemperature (double temperature);
+    double  getExterieurTemperature ();
+    void setExterieurHygrometrie (double hygrometrie);
+    double  getExterieurHygrometrie ();
 
 private:
-    int numero                 = 1;
-    float poids                = 85;
-    float batterie             = 90;
-    float interieurTemperature = 20;
-    float interieurHygrometrie = 90;
-    float exterieurTemperature = 25;
-    float exterieurHygrometrie = 90;
+    int numero                  = 1;
+    double poids                = 85;
+    double batterie             = 90;
+    double interieurTemperature = 20;
+    double interieurHygrometrie = 90;
+    double exterieurTemperature = 25;
+    double exterieurHygrometrie = 90;
 };
 
 #endif // COMOBJET_H
