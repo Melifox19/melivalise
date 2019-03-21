@@ -23,7 +23,8 @@ SOURCES += \
 HEADERS += \
     ccomxbee.h \
     mainwindow.h \
-    ccomobjet.h
+    ccomobjet.h \
+    globalobjects.h
 
 FORMS += \
     mainwindow.ui

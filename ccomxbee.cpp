@@ -1,4 +1,5 @@
 #include "ccomxbee.h"
+#include "globalobjects.h"
 #include <QtSerialPort/QSerialPortInfo>
 #include <QDebug>
 #include <QJsonObject>
