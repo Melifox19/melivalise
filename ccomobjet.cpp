@@ -25,12 +25,12 @@ double cComObjet::getPoids()
     return this->poids;
 }
 
-void cComObjet::setBatterie(double batterie)
+void cComObjet::setBatterie(int batterie)
 {
     this->batterie = batterie;
 }
 
-double cComObjet::getBatterie()
+int cComObjet::getBatterie()
 {
     return this->batterie;
 }

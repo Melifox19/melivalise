@@ -12,11 +12,11 @@ public:
     void    setNumero               (int numero);
     int     getNumero               ();
 
-    void    setPoids                   (double poids);
+    void    setPoids                (double poids);
     double  getPoids                ();
 
-    void    setBatterie             (double batterie);
-    double  getBatterie             ();
+    void    setBatterie             (int batterie);
+    int     getBatterie             ();
 
     void    setInterieurTemperature (double temperature);
     double  getInterieurTemperature ();
