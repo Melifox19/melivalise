@@ -19,6 +19,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->sb_batterie->setValue(tunnel->getBatterie());
     ui->sb_interieur_temperature->setValue(tunnel->getInterieurTemperature());
     ui->sb_exterieur_temperature->setValue(tunnel->getExterieurTemperature());
+    ui->sb_humidite->setValue(tunnel->getHumidite());
+    ui->sb_pression->setValue(tunnel->getPression());
 }
 
 MainWindow::~MainWindow()
