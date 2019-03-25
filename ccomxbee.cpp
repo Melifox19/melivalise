@@ -39,14 +39,14 @@ void cComXbee::on_lireXbee()
     buffer = serialPort.readAll();
     qDebug() << buffer;
 
-    // Répond le JSON à chaque requête
+    // Répond le JSON à chaque requête valide
     if (buffer.contains(requestRE))
     {
         qDebug() << "Tu as un match !";
         QStringRef numeroMeliruche(&buffer, 1,1);
         qDebug() << "Numero Meliruche :" << numeroMeliruche;
 
-        // JSON stuff
+        // JSON template for message
         QJsonObject messageJson
         {
             {"num","1"},
@@ -80,11 +80,16 @@ void cComXbee::on_lireXbee()
         messageJson.erase(iterator);
         messageJson.insert("pres", tunnel->getPression());
 
-        // Réponse
+        // Prépration de la réponse
         QJsonDocument doc(messageJson);
         QString message(doc.toJson(QJsonDocument::Compact));
-        on_ecrireXbee(message);
-    } else {
+
+        // Réponse uniquement au numéro demandé
+        if (numeroMeliruche.toInt() == tunnel->getNumero())
+        {
+            on_ecrireXbee(message);
+        }
+    } else { // Réponse si une requete n'est pas considérée comme valide
       qDebug() << "N'est pas une requete";
     }
 }
