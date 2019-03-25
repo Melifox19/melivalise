@@ -18,17 +18,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->sb_poids->setValue(tunnel->getPoids());
     ui->sb_batterie->setValue(tunnel->getBatterie());
     ui->sb_interieur_temperature->setValue(tunnel->getInterieurTemperature());
-    ui->sb_interieur_hygrometrie->setValue(tunnel->getInterieurHygrometrie());
     ui->sb_exterieur_temperature->setValue(tunnel->getExterieurTemperature());
-    ui->sb_exterieur_hygrometrie->setValue(tunnel->getExterieurHygrometrie());
-    if (tunnel->getEssaimage200() == true)
-        ui->ckb_200->setChecked(true);
-    else
-        ui->ckb_200->setChecked(false);
-    if (tunnel->getEssaimage400() == true)
-        ui->ckb_400->setChecked(true);
-    else
-        ui->ckb_400->setChecked(false);
 }
 
 MainWindow::~MainWindow()
@@ -180,7 +170,7 @@ void MainWindow::on_pb_pression_plus_100_released()
     ui->sb_pression->setValue(ui->sb_pression->value() + 100);
 }
 
-void MainWindow::on_pb_pressio_plus_10_released()
+void MainWindow::on_pb_pression_plus_10_released()
 {
     ui->sb_pression->setValue(ui->sb_pression->value() + 10);
 }
@@ -225,39 +215,19 @@ void MainWindow::on_sb_interieur_temperature_valueChanged(double arg1)
    tunnel->setInterieurTemperature(arg1);
 }
 
-void MainWindow::on_sb_interieur_hygrometrie_valueChanged(double arg1)
-{
-    tunnel->setInterieurHygrometrie(arg1);
-}
-
 void MainWindow::on_sb_exterieur_temperature_valueChanged(double arg1)
 {
     tunnel->setExterieurTemperature(arg1);
 }
 
-void MainWindow::on_sb_exterieur_hygrometrie_valueChanged(double arg1)
+void MainWindow::on_sb_humidite_valueChanged(int arg1)
 {
-    tunnel->setExterieurHygrometrie(arg1);
+    tunnel->setHumidite(arg1);
+    qDebug() << tunnel->getHumidite();
 }
 
-void MainWindow::on_ckb_200_stateChanged(int arg1)
+void MainWindow::on_sb_pression_valueChanged(int arg1)
 {
-    if (arg1 == 2)
-    {
-        tunnel->setEssaimage200(true);
-    }
-    else {
-        tunnel->setEssaimage200(false);
-    }
-}
-
-void MainWindow::on_ckb_400_stateChanged(int arg1)
-{
-    if (arg1 == 2)
-    {
-        tunnel->setEssaimage200(true);
-    }
-    else {
-        tunnel->setEssaimage200(false);
-    }
+    tunnel->setPression(arg1);
+    qDebug() << tunnel->getPression();
 }

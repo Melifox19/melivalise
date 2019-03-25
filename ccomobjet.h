@@ -20,29 +20,25 @@ public:
 
     void    setInterieurTemperature (double temperature);
     double  getInterieurTemperature ();
-    void    setInterieurHygrometrie (double hygrometrie);
-    double  getInterieurHygrometrie ();
 
     void    setExterieurTemperature (double temperature);
     double  getExterieurTemperature ();
-    void    setExterieurHygrometrie (double hygrometrie);
-    double  getExterieurHygrometrie ();
 
-    void    setEssaimage200         (bool essaimage);
-    bool    getEssaimage200         ();
-    void    setEssaimage400         (bool essaimage);
-    bool    getEssaimage400         ();
+    void    setHumidite             (int humidite);
+    int     getHumidite             ();
+
+    void    setPression             (int pression);
+    int     getPression             ();
+
 
 private:
     int    numero               = 1;
     double poids                = 85;
     int    batterie             = 90;
     double interieurTemperature = 20;
-    double interieurHygrometrie = 90;
     double exterieurTemperature = 25;
-    double exterieurHygrometrie = 90;
-    bool   essaimage200         = false;
-    bool   essaimage400         = false;
+    int    humidite             = 90;
+    int    pression             = 1015;
 };
 
 #endif // COMOBJET_H

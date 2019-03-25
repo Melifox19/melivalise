@@ -45,16 +45,6 @@ double cComObjet::getInterieurTemperature()
     return this->interieurTemperature;
 }
 
-void cComObjet::setInterieurHygrometrie(double hygrometrie)
-{
-    this->interieurHygrometrie = hygrometrie;
-}
-
-double cComObjet::getInterieurHygrometrie()
-{
-    return this->interieurHygrometrie;
-}
-
 void cComObjet::setExterieurTemperature(double temperature)
 {
     this->exterieurTemperature = temperature;
@@ -65,32 +55,22 @@ double cComObjet::getExterieurTemperature()
     return  this->exterieurTemperature;
 }
 
-void cComObjet::setExterieurHygrometrie(double hygrometrie)
+void cComObjet::setHumidite(int humidite)
 {
-    this->exterieurHygrometrie = hygrometrie;
+    this->humidite = humidite;
 }
 
-double cComObjet::getExterieurHygrometrie()
+int cComObjet::getHumidite()
 {
-    return this->exterieurHygrometrie;
+    return this->humidite;
 }
 
-void cComObjet::setEssaimage200(bool essaimage)
+void cComObjet::setPression(int pression)
 {
-   this->essaimage200 = essaimage;
+    this->pression = pression;
 }
 
-bool cComObjet::getEssaimage200()
+int cComObjet::getPression()
 {
-    return this->essaimage200;
-}
-
-void cComObjet::setEssaimage400(bool essaimage)
-{
-    this->essaimage400 = essaimage;
-}
-
-bool cComObjet::getEssaimage400()
-{
-    return this->essaimage400;
+    return this->pression;
 }

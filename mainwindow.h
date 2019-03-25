@@ -74,7 +74,7 @@ private slots:
 
     void on_pb_pression_plus_100_released();
 
-    void on_pb_pressio_plus_10_released();
+    void on_pb_pression_plus_10_released();
 
     void on_pb_pression_plus_1_released();
 
@@ -92,15 +92,11 @@ private slots:
 
     void on_sb_interieur_temperature_valueChanged(double arg1);
 
-    void on_sb_interieur_hygrometrie_valueChanged(double arg1);
-
     void on_sb_exterieur_temperature_valueChanged(double arg1);
 
-    void on_sb_exterieur_hygrometrie_valueChanged(double arg1);
+    void on_sb_humidite_valueChanged(int arg1);
 
-    void on_ckb_200_stateChanged(int arg1);
-
-    void on_ckb_400_stateChanged(int arg1);
+    void on_sb_pression_valueChanged(int arg1);
 
 private:
     Ui::MainWindow *ui;
