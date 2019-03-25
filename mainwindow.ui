@@ -267,10 +267,10 @@
               <bool>true</bool>
              </property>
              <property name="minimum">
-              <number>1</number>
+              <number>0</number>
              </property>
              <property name="maximum">
-              <number>8</number>
+              <number>7</number>
              </property>
             </widget>
            </item>
@@ -514,6 +514,9 @@
              </property>
              <property name="maximum">
               <number>100</number>
+             </property>
+             <property name="singleStep">
+              <number>10</number>
              </property>
              <property name="value">
               <number>90</number>
@@ -873,8 +876,11 @@
              <property name="decimals">
               <number>1</number>
              </property>
+             <property name="minimum">
+              <double>-20.000000000000000</double>
+             </property>
              <property name="maximum">
-              <double>100.000000000000000</double>
+              <double>50.000000000000000</double>
              </property>
              <property name="value">
               <double>25.000000000000000</double>
@@ -918,8 +924,11 @@
              <property name="decimals">
               <number>1</number>
              </property>
+             <property name="minimum">
+              <double>-20.000000000000000</double>
+             </property>
              <property name="maximum">
-              <double>100.000000000000000</double>
+              <double>50.000000000000000</double>
              </property>
              <property name="value">
               <double>25.000000000000000</double>
@@ -1069,10 +1078,10 @@
               <string>hPa</string>
              </property>
              <property name="minimum">
-              <number>1</number>
+              <number>600</number>
              </property>
              <property name="maximum">
-              <number>9999</number>
+              <number>1100</number>
              </property>
              <property name="value">
               <number>1015</number>
@@ -1233,8 +1242,11 @@
              <property name="suffix">
               <string>%</string>
              </property>
+             <property name="minimum">
+              <number>20</number>
+             </property>
              <property name="maximum">
-              <number>100</number>
+              <number>90</number>
              </property>
              <property name="value">
               <number>90</number>
