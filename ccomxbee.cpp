@@ -45,22 +45,48 @@ void cComXbee::on_lireXbee()
         qDebug() << "Tu as un match !";
         QStringRef numeroMeliruche(&buffer, 1,1);
         qDebug() << "Numero Meliruche :" << numeroMeliruche;
+
+        // JSON stuff
+        QJsonObject messageJson
+        {
+            {"num","1"},
+            {"tint","25.5"},
+            {"text","33.0"},
+            {"mas","120.4"},
+            {"bat","50"},
+            {"hum","45"},
+            {"pres","1015"}
+        };
+        // Mise à jour du JSON répondu avec les valeurs utilisateur
+        auto iterator = messageJson.find("num");
+        messageJson.erase(iterator);
+        messageJson.insert("num", tunnel->getNumero());
+        iterator = messageJson.find("tint");
+        messageJson.erase(iterator);
+        messageJson.insert("tint", tunnel->getInterieurTemperature());
+        iterator = messageJson.find("text");
+        messageJson.erase(iterator);
+        messageJson.insert("text", tunnel->getExterieurTemperature());
+        iterator = messageJson.find("mas");
+        messageJson.erase(iterator);
+        messageJson.insert("mas", tunnel->getPoids());
+        iterator = messageJson.find("bat");
+        messageJson.erase(iterator);
+        messageJson.insert("bat", tunnel->getBatterie());
+        iterator = messageJson.find("hum");
+        messageJson.erase(iterator);
+        messageJson.insert("hum", tunnel->getHumidite());
+        iterator = messageJson.find("pres");
+        messageJson.erase(iterator);
+        messageJson.insert("pres", tunnel->getPression());
+
+        // Réponse
+        QJsonDocument doc(messageJson);
+        QString message(doc.toJson(QJsonDocument::Compact));
+        on_ecrireXbee(message);
     } else {
       qDebug() << "N'est pas une requete";
     }
-    QJsonObject messageJson
-    {
-      {"num","1"},
-        {"tint","25.5"},
-        {"text","33.0"},
-        {"mas","120.4"},
-        {"bat","50"},
-        {"hum","45"},
-        {"pres","1015"}
-    };
-    //QJsonDocument doc(messageJson);
-    //QString message(doc.toJson(QJsonDocument::Compact));
-    //on_ecrireXbee(message);
 }
 
 void cComXbee::on_ecrireXbee(QString message)
