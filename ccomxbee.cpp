@@ -80,7 +80,7 @@ void cComXbee::on_lireXbee()
         messageJson.erase(iterator);
         messageJson.insert("pres", tunnel->getPression());
 
-        // Prépration de la réponse
+        // Préparation de la réponse
         QJsonDocument doc(messageJson);
         QString message(doc.toJson(QJsonDocument::Compact));
 
@@ -101,6 +101,7 @@ void cComXbee::on_ecrireXbee(QString message)
     messageBA.append(message);
     qDebug() << messageBA;
 
+    // Écriture du message dans le port série
     serialPort.write(messageBA);
 }
 
