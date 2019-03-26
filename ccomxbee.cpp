@@ -8,11 +8,13 @@
 
 cComXbee::cComXbee(QObject *parent) : QObject(parent)
 {
+    // Paramètres pour le port série
     serialPort.setBaudRate(QSerialPort::Baud9600);
     serialPort.setParity(QSerialPort::Parity::NoParity);
     serialPort.setDataBits(QSerialPort::Data8);
     serialPort.setPortName("/dev/ttyUSB0");
 
+    // Définition de la regex validant les requêtes de la Méliborne
     requestRE.setPattern("^\\?[0-7];");
     if (requestRE.isValid())
     {
@@ -24,6 +26,7 @@ cComXbee::cComXbee(QObject *parent) : QObject(parent)
     //connect(&serialPort, &QSerialPort::errorOccurred, this, &cComXbee::on_error);
     connect(&serialPort, &QSerialPort::readyRead, this, &cComXbee::on_lireXbee);
 
+    // Vérification que le port série est bien disponible en RW
     if (serialPort.open(QIODevice::ReadWrite))
     {
         qDebug() << "Serial port open : success";
@@ -49,7 +52,7 @@ void cComXbee::on_lireXbee()
         // Réponse uniquement au numéro demandé
         if (numeroMeliruche.toInt() == tunnel->getNumero())
         {
-            // JSON template for message
+            // JSON template pour la réponse
             QJsonObject messageJson
             {
                 {"num","1"},

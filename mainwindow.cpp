@@ -32,6 +32,9 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+/*---------------------------------------------------------------------------*/
+// Méthodes pour changer les valeurs à l'appui des boutons
 void MainWindow::on_pb_numero_plus_1_released()
 {
     ui->sb_numero->setValue(ui->sb_numero->value() + 1);
@@ -202,6 +205,8 @@ void MainWindow::on_pb_pression_moins_100_released()
     ui->sb_pression->setValue(ui->sb_pression->value() - 100);
 }
 
+/*---------------------------------------------------------------------------*/
+// Mettre à jour le tunnel lorsque les valeurs changent
 void MainWindow::on_sb_numero_valueChanged(int arg1)
 {
    tunnel->setNumero(arg1);

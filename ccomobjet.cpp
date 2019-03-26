@@ -5,6 +5,8 @@ cComObjet::cComObjet(QObject *parent) : QObject (parent)
 
 }
 
+/*---------------------------------------------------------------------------*/
+// Fonctions pour définir et accéder aux variables
 void cComObjet::setNumero(int numero)
 {
     this->numero = numero;

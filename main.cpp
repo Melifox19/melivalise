@@ -8,9 +8,12 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
+    // Instanciation de l'objet du terminal série (Xbee)
     cComXbee comXbee;
 
+    // Instanciation de l'interface graphique (plein écran)
     MainWindow w;
     w.showMaximized();
+
     return a.exec();
 }

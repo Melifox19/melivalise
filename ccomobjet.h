@@ -32,6 +32,7 @@ public:
 
 
 private:
+    // Ce sont les valeurs par défaut, celles chargées par l'IHM
     int    numero               = 1;
     double poids                = 85;
     int    batterie             = 90;
