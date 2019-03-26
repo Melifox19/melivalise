@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "globalobjects.h"
-#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -225,11 +224,9 @@ void MainWindow::on_sb_exterieur_temperature_valueChanged(double arg1)
 void MainWindow::on_sb_humidite_valueChanged(int arg1)
 {
     tunnel->setHumidite(arg1);
-    qDebug() << tunnel->getHumidite();
 }
 
 void MainWindow::on_sb_pression_valueChanged(int arg1)
 {
     tunnel->setPression(arg1);
-    qDebug() << tunnel->getPression();
 }
