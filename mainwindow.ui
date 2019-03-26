@@ -47,7 +47,7 @@
        </attribute>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="0" column="1">
-         <widget class="QGroupBox" name="gb_essaimage">
+         <widget class="QGroupBox" name="gb_undef">
           <property name="font">
            <font>
             <pointsize>12</pointsize>
@@ -64,6 +64,7 @@
           <property name="font">
            <font>
             <pointsize>12</pointsize>
+            <underline>false</underline>
            </font>
           </property>
           <property name="title">
@@ -96,6 +97,9 @@
            </item>
            <item row="3" column="0">
             <widget class="QDoubleSpinBox" name="sb_poids">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="sizePolicy">
               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                <horstretch>0</horstretch>
@@ -234,6 +238,9 @@
            </item>
            <item row="1" column="0">
             <widget class="QSpinBox" name="sb_numero">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="sizePolicy">
               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                <horstretch>0</horstretch>
@@ -480,6 +487,9 @@
            </item>
            <item row="5" column="0">
             <widget class="QSpinBox" name="sb_batterie">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="sizePolicy">
               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                <horstretch>0</horstretch>
@@ -527,7 +537,7 @@
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QGroupBox" name="gb_interieur">
+         <widget class="QGroupBox" name="gb_temperature">
           <property name="font">
            <font>
             <pointsize>12</pointsize>
@@ -861,6 +871,9 @@
                <pointsize>10</pointsize>
               </font>
              </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
              </property>
@@ -905,6 +918,9 @@
               <font>
                <pointsize>10</pointsize>
               </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
