@@ -13,7 +13,7 @@ cComXbee::cComXbee(QObject *parent) : QObject(parent)
     serialPort.setDataBits(QSerialPort::Data8);
     serialPort.setPortName("/dev/ttyUSB0");
 
-    requestRE.setPattern("^\\?[1-8];");
+    requestRE.setPattern("^\\?[0-7];");
     if (requestRE.isValid())
     {
         qDebug() << "Regex valide";
