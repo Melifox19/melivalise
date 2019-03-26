@@ -16,12 +16,6 @@ cComXbee::cComXbee(QObject *parent) : QObject(parent)
 
     // Définition de la regex validant les requêtes de la Méliborne
     requestRE.setPattern("^\\?[0-7];");
-    if (requestRE.isValid())
-    {
-        qDebug() << "Regex valide";
-    } else {
-        qDebug() << "Regex non valide";
-    }
 
     //connect(&serialPort, &QSerialPort::errorOccurred, this, &cComXbee::on_error);
     connect(&serialPort, &QSerialPort::readyRead, this, &cComXbee::on_lireXbee);
@@ -45,7 +39,6 @@ void cComXbee::on_lireXbee()
     // Répond le JSON à chaque requête valide
     if (buffer.contains(requestRE))
     {
-        qDebug() << "Tu as un match !";
         QStringRef numeroMeliruche(&buffer, 1,1);
         qDebug() << "Numero Meliruche :" << numeroMeliruche;
 

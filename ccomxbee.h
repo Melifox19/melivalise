@@ -11,11 +11,6 @@ class cComXbee : public QObject
 public:
     explicit cComXbee(QObject *parent = nullptr);
 
-signals:
-
-public slots:
-
-
 private slots:
     void on_lireXbee();
     void on_ecrireXbee(QString message);
