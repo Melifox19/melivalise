@@ -20,6 +20,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->sb_exterieur_temperature->setValue(tunnel->getExterieurTemperature());
     ui->sb_humidite->setValue(tunnel->getHumidite());
     ui->sb_pression->setValue(tunnel->getPression());
+
+    // CSS pour l'interface graphique
+    ui->gb_general    ->setStyleSheet("QGroupBox {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #FFFFFF stop: 1 #FFFFFF);border: 2px solid gray;border-radius: 5px;margin-top: 1ex; /* leave space at the top for the title */}");
+    ui->gb_autre      ->setStyleSheet("QGroupBox {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #FFFFFF stop: 1 #FFFFFF);border: 2px solid gray;border-radius: 5px;margin-top: 1ex; /* leave space at the top for the title */}");
+    ui->gb_temperature->setStyleSheet("QGroupBox {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #FFFFFF stop: 1 #FFFFFF);border: 2px solid gray;border-radius: 5px;margin-top: 1ex; /* leave space at the top for the title */}");
+    ui->gb_undef      ->setStyleSheet("QGroupBox {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #FFFFFF stop: 1 #FFFFFF);border: 2px solid gray;border-radius: 5px;margin-top: 1ex; /* leave space at the top for the title */}");
 }
 
 MainWindow::~MainWindow()

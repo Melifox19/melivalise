@@ -47,7 +47,7 @@
        </attribute>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="0" column="1">
-         <widget class="QGroupBox" name="gb_essaimage">
+         <widget class="QGroupBox" name="gb_undef">
           <property name="font">
            <font>
             <pointsize>12</pointsize>
@@ -64,6 +64,7 @@
           <property name="font">
            <font>
             <pointsize>12</pointsize>
+            <underline>false</underline>
            </font>
           </property>
           <property name="title">
@@ -96,6 +97,9 @@
            </item>
            <item row="3" column="0">
             <widget class="QDoubleSpinBox" name="sb_poids">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="sizePolicy">
               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                <horstretch>0</horstretch>
@@ -234,6 +238,9 @@
            </item>
            <item row="1" column="0">
             <widget class="QSpinBox" name="sb_numero">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="sizePolicy">
               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                <horstretch>0</horstretch>
@@ -267,10 +274,10 @@
               <bool>true</bool>
              </property>
              <property name="minimum">
-              <number>1</number>
+              <number>0</number>
              </property>
              <property name="maximum">
-              <number>8</number>
+              <number>7</number>
              </property>
             </widget>
            </item>
@@ -480,6 +487,9 @@
            </item>
            <item row="5" column="0">
             <widget class="QSpinBox" name="sb_batterie">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="sizePolicy">
               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
                <horstretch>0</horstretch>
@@ -515,6 +525,9 @@
              <property name="maximum">
               <number>100</number>
              </property>
+             <property name="singleStep">
+              <number>10</number>
+             </property>
              <property name="value">
               <number>90</number>
              </property>
@@ -524,7 +537,7 @@
          </widget>
         </item>
         <item row="1" column="0">
-         <widget class="QGroupBox" name="gb_interieur">
+         <widget class="QGroupBox" name="gb_temperature">
           <property name="font">
            <font>
             <pointsize>12</pointsize>
@@ -858,6 +871,9 @@
                <pointsize>10</pointsize>
               </font>
              </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
              </property>
@@ -873,8 +889,11 @@
              <property name="decimals">
               <number>1</number>
              </property>
+             <property name="minimum">
+              <double>-20.000000000000000</double>
+             </property>
              <property name="maximum">
-              <double>100.000000000000000</double>
+              <double>50.000000000000000</double>
              </property>
              <property name="value">
               <double>25.000000000000000</double>
@@ -900,6 +919,9 @@
                <pointsize>10</pointsize>
               </font>
              </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
              </property>
@@ -918,8 +940,11 @@
              <property name="decimals">
               <number>1</number>
              </property>
+             <property name="minimum">
+              <double>-20.000000000000000</double>
+             </property>
              <property name="maximum">
-              <double>100.000000000000000</double>
+              <double>50.000000000000000</double>
              </property>
              <property name="value">
               <double>25.000000000000000</double>
@@ -1069,10 +1094,10 @@
               <string>hPa</string>
              </property>
              <property name="minimum">
-              <number>1</number>
+              <number>600</number>
              </property>
              <property name="maximum">
-              <number>9999</number>
+              <number>1100</number>
              </property>
              <property name="value">
               <number>1015</number>
@@ -1233,8 +1258,11 @@
              <property name="suffix">
               <string>%</string>
              </property>
+             <property name="minimum">
+              <number>20</number>
+             </property>
              <property name="maximum">
-              <number>100</number>
+              <number>90</number>
              </property>
              <property name="value">
               <number>90</number>
