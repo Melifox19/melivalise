@@ -46,51 +46,52 @@ void cComXbee::on_lireXbee()
         QStringRef numeroMeliruche(&buffer, 1,1);
         qDebug() << "Numero Meliruche :" << numeroMeliruche;
 
-        // JSON template for message
-        QJsonObject messageJson
-        {
-            {"num","1"},
-            {"tint","25.5"},
-            {"text","33.0"},
-            {"mas","120.4"},
-            {"bat","50"},
-            {"hum","45"},
-            {"pres","1015"}
-        };
-        // Mise à jour du JSON répondu avec les valeurs utilisateur
-        auto iterator = messageJson.find("num");
-        messageJson.erase(iterator);
-        messageJson.insert("num", tunnel->getNumero());
-        iterator = messageJson.find("tint");
-        messageJson.erase(iterator);
-        messageJson.insert("tint", tunnel->getInterieurTemperature());
-        iterator = messageJson.find("text");
-        messageJson.erase(iterator);
-        messageJson.insert("text", tunnel->getExterieurTemperature());
-        iterator = messageJson.find("mas");
-        messageJson.erase(iterator);
-        messageJson.insert("mas", tunnel->getPoids());
-        iterator = messageJson.find("bat");
-        messageJson.erase(iterator);
-        messageJson.insert("bat", tunnel->getBatterie());
-        iterator = messageJson.find("hum");
-        messageJson.erase(iterator);
-        messageJson.insert("hum", tunnel->getHumidite());
-        iterator = messageJson.find("pres");
-        messageJson.erase(iterator);
-        messageJson.insert("pres", tunnel->getPression());
-
-        // Préparation de la réponse
-        QJsonDocument doc(messageJson);
-        QString message(doc.toJson(QJsonDocument::Compact));
-
         // Réponse uniquement au numéro demandé
         if (numeroMeliruche.toInt() == tunnel->getNumero())
         {
+            // JSON template for message
+            QJsonObject messageJson
+            {
+                {"num","1"},
+                {"tint","25.5"},
+                {"text","33.0"},
+                {"mas","120.4"},
+                {"bat","50"},
+                {"hum","45"},
+                {"pres","1015"}
+            };
+            // Mise à jour du JSON répondu avec les valeurs utilisateur
+            auto iterator = messageJson.find("num");
+                messageJson.erase(iterator);
+                messageJson.insert("num", tunnel->getNumero());
+            iterator = messageJson.find("tint");
+                messageJson.erase(iterator);
+                messageJson.insert("tint", tunnel->getInterieurTemperature());
+            iterator = messageJson.find("text");
+                messageJson.erase(iterator);
+                messageJson.insert("text", tunnel->getExterieurTemperature());
+            iterator = messageJson.find("mas");
+                messageJson.erase(iterator);
+                messageJson.insert("mas", tunnel->getPoids());
+            iterator = messageJson.find("bat");
+                messageJson.erase(iterator);
+                messageJson.insert("bat", tunnel->getBatterie());
+            iterator = messageJson.find("hum");
+                messageJson.erase(iterator);
+                messageJson.insert("hum", tunnel->getHumidite());
+            iterator = messageJson.find("pres");
+                messageJson.erase(iterator);
+                messageJson.insert("pres", tunnel->getPression());
+
+            // Préparation de la réponse
+            QJsonDocument doc(messageJson);
+            QString message(doc.toJson(QJsonDocument::Compact));
+
+            // Envoi de la réponse
             on_ecrireXbee(message);
         }
     } else { // Réponse si une requete n'est pas considérée comme valide
-      qDebug() << "N'est pas une requete";
+        qDebug() << "N'est pas une requete";
     }
 }
 
