@@ -47,16 +47,59 @@
        </attribute>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="0" column="1">
-         <widget class="QGroupBox" name="gb_undef">
+         <widget class="QGroupBox" name="gb_capeurs_defectueux">
           <property name="font">
            <font>
             <pointsize>12</pointsize>
            </font>
           </property>
           <property name="title">
-           <string/>
+           <string>Capteurs défectueux</string>
           </property>
-          <layout class="QVBoxLayout" name="verticalLayout"/>
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="2" column="1">
+            <widget class="QCheckBox" name="cb_defectueux_pression">
+             <property name="text">
+              <string>Pression</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QCheckBox" name="cb_defectueux_temperature_exterieur">
+             <property name="text">
+              <string>Temp. extérieur</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QCheckBox" name="cb_defectueux_humidite">
+             <property name="text">
+              <string>Humidité</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QCheckBox" name="cb_defectueux_poids">
+             <property name="text">
+              <string>Poids</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QCheckBox" name="cb_defectueux_batterie">
+             <property name="text">
+              <string>Batterie</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QCheckBox" name="cb_defectueux_temperature_interieur">
+             <property name="text">
+              <string>Temp. intérieur</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
         <item row="0" column="0">
