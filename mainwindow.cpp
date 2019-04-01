@@ -22,10 +22,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->sb_pression->setValue(tunnel->getPression());
 
     // CSS pour l'interface graphique
-    ui->gb_general    ->setStyleSheet("QGroupBox {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #FFFFFF stop: 1 #FFFFFF);border: 2px solid gray;border-radius: 5px;margin-top: 1ex; /* leave space at the top for the title */}");
-    ui->gb_autre      ->setStyleSheet("QGroupBox {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #FFFFFF stop: 1 #FFFFFF);border: 2px solid gray;border-radius: 5px;margin-top: 1ex; /* leave space at the top for the title */}");
-    ui->gb_temperature->setStyleSheet("QGroupBox {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #FFFFFF stop: 1 #FFFFFF);border: 2px solid gray;border-radius: 5px;margin-top: 1ex; /* leave space at the top for the title */}");
-    ui->gb_undef      ->setStyleSheet("QGroupBox {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #FFFFFF stop: 1 #FFFFFF);border: 2px solid gray;border-radius: 5px;margin-top: 1ex; /* leave space at the top for the title */}");
+    ui->gb_general           ->setStyleSheet("QGroupBox {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #FFFFFF stop: 1 #FFFFFF);border: 2px solid gray;border-radius: 5px;margin-top: 1ex; /* leave space at the top for the title */}");
+    ui->gb_autre             ->setStyleSheet("QGroupBox {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #FFFFFF stop: 1 #FFFFFF);border: 2px solid gray;border-radius: 5px;margin-top: 1ex; /* leave space at the top for the title */}");
+    ui->gb_temperature       ->setStyleSheet("QGroupBox {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #FFFFFF stop: 1 #FFFFFF);border: 2px solid gray;border-radius: 5px;margin-top: 1ex; /* leave space at the top for the title */}");
+    ui->gb_capeurs_defectueux->setStyleSheet("QGroupBox {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #FFFFFF stop: 1 #FFFFFF);border: 2px solid gray;border-radius: 5px;margin-top: 1ex; /* leave space at the top for the title */}");
 }
 
 MainWindow::~MainWindow()
@@ -240,4 +240,111 @@ void MainWindow::on_sb_humidite_valueChanged(int arg1)
 void MainWindow::on_sb_pression_valueChanged(int arg1)
 {
     tunnel->setPression(arg1);
+}
+
+
+/*---------------------------------------------------------------------------*/
+// Rendre un capteur défectueux
+void MainWindow::on_cb_defectueux_poids_clicked(bool checked)
+{
+    ui->sb_poids         ->setDisabled(checked);
+    ui->pb_poids_plus_10 ->setDisabled(checked);
+    ui->pb_poids_plus_1  ->setDisabled(checked);
+    ui->pb_poids_plus_01 ->setDisabled(checked);
+    ui->pb_poids_moins_10->setDisabled(checked);
+    ui->pb_poids_moins_1 ->setDisabled(checked);
+    ui->pb_poids_moins_01->setDisabled(checked);
+
+    if (checked == true)
+    {
+        tunnel->setPoids(0xFFF);
+    } else {
+        tunnel->setPoids(ui->sb_poids->value());
+    }
+}
+
+void MainWindow::on_cb_defectueux_batterie_clicked(bool checked)
+{
+    ui->sb_batterie         ->setDisabled(checked);
+    ui->pb_batterie_plus_10 ->setDisabled(checked);
+    ui->pb_batterie_plus_1  ->setDisabled(checked);
+    ui->pb_batterie_moins_10->setDisabled(checked);
+    ui->pb_batterie_moins_1 ->setDisabled(checked);
+
+    if (checked == true)
+    {
+        tunnel->setBatterie(0x7);
+    } else {
+        tunnel->setBatterie(ui->sb_batterie->value());
+    }
+}
+
+void MainWindow::on_cb_defectueux_temperature_interieur_clicked(bool checked)
+{
+    ui->sb_interieur_temperature->setDisabled(checked);
+    ui->pb_int_temp_plus_10     ->setDisabled(checked);
+    ui->pb_int_temp_plus_1      ->setDisabled(checked);
+    ui->pb_int_temp_plus_01     ->setDisabled(checked);
+    ui->pb_int_temp_moins_10    ->setDisabled(checked);
+    ui->pb_int_temp_moins_1     ->setDisabled(checked);
+    ui->pb_int_temp_moins_01    ->setDisabled(checked);
+
+    if (checked == true)
+    {
+        tunnel->setInterieurTemperature(0xFF);
+    } else {
+        tunnel->setExterieurTemperature(ui->sb_humidite->value());
+    }
+}
+
+void MainWindow::on_cb_defectueux_humidite_clicked(bool checked)
+{
+    ui->sb_humidite         ->setDisabled(checked);
+    ui->pb_humidite_plus_10 ->setDisabled(checked);
+    ui->pb_humidite_plus_1  ->setDisabled(checked);
+    ui->pb_humidite_moins_10->setDisabled(checked);
+    ui->pb_humidite_moins_1 ->setDisabled(checked);
+
+    if (checked == true)
+    {
+        tunnel->setHumidite(0x1F);
+    } else {
+        tunnel->setHumidite(ui->sb_humidite->value());
+    }
+}
+
+void MainWindow::on_cb_defectueux_pression_clicked(bool checked)
+{
+    ui->sb_pression          ->setDisabled(checked);
+    ui->pb_pression_plus_100 ->setDisabled(checked);
+    ui->pb_pression_plus_10  ->setDisabled(checked);
+    ui->pb_pression_plus_1   ->setDisabled(checked);
+    ui->pb_pression_moins_100->setDisabled(checked);
+    ui->pb_pression_moins_10 ->setDisabled(checked);
+    ui->pb_pression_moins_1  ->setDisabled(checked);
+
+    if (checked == true)
+    {
+        tunnel->setPression(0x1FF);
+    } else {
+        tunnel->setPression(ui->sb_pression->value());
+    }
+}
+
+void MainWindow::on_cb_defectueux_temperature_exterieur_clicked(bool checked)
+{
+    ui->sb_exterieur_temperature->setDisabled(checked);
+    ui->pb_ext_temp_plus_10     ->setDisabled(checked);
+    ui->pb_ext_temp_plus_1      ->setDisabled(checked);
+    ui->pb_ext_temp_plus_01     ->setDisabled(checked);
+    ui->pb_ext_temp_moins_10    ->setDisabled(checked);
+    ui->pb_ext_temp_moins_1     ->setDisabled(checked);
+    ui->pb_ext_temp_moins_01    ->setDisabled(checked);
+
+    if (checked == true)
+    {
+        tunnel->setExterieurTemperature(0xFF);
+    } else {
+        tunnel->setExterieurTemperature(ui->sb_exterieur_temperature->value());
+    }
 }

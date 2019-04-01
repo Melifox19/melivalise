@@ -98,6 +98,18 @@ private slots:
 
     void on_sb_pression_valueChanged(int arg1);
 
+    void on_cb_defectueux_poids_clicked(bool checked);
+
+    void on_cb_defectueux_batterie_clicked(bool checked);
+
+    void on_cb_defectueux_temperature_interieur_clicked(bool checked);
+
+    void on_cb_defectueux_humidite_clicked(bool checked);
+
+    void on_cb_defectueux_pression_clicked(bool checked);
+
+    void on_cb_defectueux_temperature_exterieur_clicked(bool checked);
+
 private:
     Ui::MainWindow *ui;
 };
