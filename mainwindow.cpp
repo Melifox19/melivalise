@@ -293,7 +293,7 @@ void MainWindow::on_cb_defectueux_temperature_interieur_clicked(bool checked)
     {
         tunnel->setInterieurTemperature(51);
     } else {
-        tunnel->setExterieurTemperature(ui->sb_humidite->value());
+        tunnel->setInterieurTemperature(ui->sb_interieur_temperature->value());
     }
 }
 
