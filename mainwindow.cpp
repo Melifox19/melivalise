@@ -257,7 +257,7 @@ void MainWindow::on_cb_defectueux_poids_clicked(bool checked)
 
     if (checked == true)
     {
-        tunnel->setPoids(0xFFF);
+        tunnel->setPoids(201);
     } else {
         tunnel->setPoids(ui->sb_poids->value());
     }
@@ -273,7 +273,7 @@ void MainWindow::on_cb_defectueux_batterie_clicked(bool checked)
 
     if (checked == true)
     {
-        tunnel->setBatterie(0x7);
+        tunnel->setBatterie(101);
     } else {
         tunnel->setBatterie(ui->sb_batterie->value());
     }
@@ -291,7 +291,7 @@ void MainWindow::on_cb_defectueux_temperature_interieur_clicked(bool checked)
 
     if (checked == true)
     {
-        tunnel->setInterieurTemperature(0xFF);
+        tunnel->setInterieurTemperature(51);
     } else {
         tunnel->setExterieurTemperature(ui->sb_humidite->value());
     }
@@ -307,7 +307,7 @@ void MainWindow::on_cb_defectueux_humidite_clicked(bool checked)
 
     if (checked == true)
     {
-        tunnel->setHumidite(0x1F);
+        tunnel->setHumidite(101);
     } else {
         tunnel->setHumidite(ui->sb_humidite->value());
     }
@@ -325,7 +325,7 @@ void MainWindow::on_cb_defectueux_pression_clicked(bool checked)
 
     if (checked == true)
     {
-        tunnel->setPression(0x1FF);
+        tunnel->setPression(1111);
     } else {
         tunnel->setPression(ui->sb_pression->value());
     }
@@ -343,7 +343,7 @@ void MainWindow::on_cb_defectueux_temperature_exterieur_clicked(bool checked)
 
     if (checked == true)
     {
-        tunnel->setExterieurTemperature(0xFF);
+        tunnel->setExterieurTemperature(51);
     } else {
         tunnel->setExterieurTemperature(ui->sb_exterieur_temperature->value());
     }
