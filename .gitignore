@@ -2,6 +2,9 @@
 .swp
 .*.swp
 
+# Doxygen folder generated
+doxygen
+
 # C++ objects and libs
 *.slo
 *.lo
