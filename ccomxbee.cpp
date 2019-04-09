@@ -68,7 +68,7 @@ void cComXbee::on_lireXbee()
                 messageJson.insert("text", tunnel->getExterieurTemperature());
             iterator = messageJson.find("mas");
                 messageJson.erase(iterator);
-                messageJson.insert("mas", tunnel->getPoids());
+                messageJson.insert("mas", tunnel->getMasse());
             iterator = messageJson.find("bat");
                 messageJson.erase(iterator);
                 messageJson.insert("bat", tunnel->getBatterie());

@@ -12,8 +12,8 @@ public:
     void    setNumero               (int numero);
     int     getNumero               ();
 
-    void    setPoids                (double poids);
-    double  getPoids                ();
+    void    setMasse                (double masse);
+    double  getMasse                ();
 
     void    setBatterie             (int batterie);
     int     getBatterie             ();
@@ -34,7 +34,7 @@ public:
 private:
     // Ce sont les valeurs par défaut, celles chargées par l'IHM
     int    numero               = 1;
-    double poids                = 85;
+    double masse                = 85;
     int    batterie             = 90;
     double interieurTemperature = 20;
     double exterieurTemperature = 25;

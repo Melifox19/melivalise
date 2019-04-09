@@ -17,14 +17,14 @@ int cComObjet::getNumero()
     return this->numero;
 }
 
-void cComObjet::setPoids(double poids)
+void cComObjet::setMasse(double masse)
 {
-    this->poids = poids;
+    this->masse = masse;
 }
 
-double cComObjet::getPoids()
+double cComObjet::getMasse()
 {
-    return this->poids;
+    return this->masse;
 }
 
 void cComObjet::setBatterie(int batterie)

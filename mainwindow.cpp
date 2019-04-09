@@ -14,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // Affectation des valeurs par celles du tunnel
     ui->sb_numero->setValue(tunnel->getNumero());
-    ui->sb_poids->setValue(tunnel->getPoids());
+    ui->sb_masse->setValue(tunnel->getMasse());
     ui->sb_batterie->setValue(tunnel->getBatterie());
     ui->sb_interieur_temperature->setValue(tunnel->getInterieurTemperature());
     ui->sb_exterieur_temperature->setValue(tunnel->getExterieurTemperature());
@@ -45,34 +45,34 @@ void MainWindow::on_pb_numero_moins_1_released()
    ui->sb_numero->setValue(ui->sb_numero->value() - 1);
 }
 
-void MainWindow::on_pb_poids_plus_10_released()
+void MainWindow::on_pb_masse_plus_10_released()
 {
-   ui->sb_poids->setValue(ui->sb_poids->value() + 10);
+   ui->sb_masse->setValue(ui->sb_masse->value() + 10);
 }
 
-void MainWindow::on_pb_poids_plus_1_released()
+void MainWindow::on_pb_masse_plus_1_released()
 {
-   ui->sb_poids->setValue(ui->sb_poids->value() + 1);
+   ui->sb_masse->setValue(ui->sb_masse->value() + 1);
 }
 
-void MainWindow::on_pb_poids_plus_01_released()
+void MainWindow::on_pb_masse_plus_01_released()
 {
-   ui->sb_poids->setValue(ui->sb_poids->value() + 0.1);
+   ui->sb_masse->setValue(ui->sb_masse->value() + 0.1);
 }
 
-void MainWindow::on_pb_poids_moins_01_released()
+void MainWindow::on_pb_masse_moins_01_released()
 {
-   ui->sb_poids->setValue(ui->sb_poids->value() - 0.1);
+   ui->sb_masse->setValue(ui->sb_masse->value() - 0.1);
 }
 
-void MainWindow::on_pb_poids_moins_1_released()
+void MainWindow::on_pb_masse_moins_1_released()
 {
-   ui->sb_poids->setValue(ui->sb_poids->value() - 1);
+   ui->sb_masse->setValue(ui->sb_masse->value() - 1);
 }
 
-void MainWindow::on_pb_poids_moins_10_released()
+void MainWindow::on_pb_masse_moins_10_released()
 {
-   ui->sb_poids->setValue(ui->sb_poids->value() - 10);
+   ui->sb_masse->setValue(ui->sb_masse->value() - 10);
 }
 
 void MainWindow::on_pb_batterie_plus_10_released()
@@ -212,9 +212,9 @@ void MainWindow::on_sb_numero_valueChanged(int arg1)
    tunnel->setNumero(arg1);
 }
 
-void MainWindow::on_sb_poids_valueChanged(double arg1)
+void MainWindow::on_sb_masse_valueChanged(double arg1)
 {
-    tunnel->setPoids(arg1);
+    tunnel->setMasse(arg1);
 }
 
 void MainWindow::on_sb_batterie_valueChanged(int arg1)
@@ -245,21 +245,21 @@ void MainWindow::on_sb_pression_valueChanged(int arg1)
 
 /*---------------------------------------------------------------------------*/
 // Rendre un capteur défectueux
-void MainWindow::on_cb_defectueux_poids_clicked(bool checked)
+void MainWindow::on_cb_defectueux_masse_clicked(bool checked)
 {
-    ui->sb_poids         ->setDisabled(checked);
-    ui->pb_poids_plus_10 ->setDisabled(checked);
-    ui->pb_poids_plus_1  ->setDisabled(checked);
-    ui->pb_poids_plus_01 ->setDisabled(checked);
-    ui->pb_poids_moins_10->setDisabled(checked);
-    ui->pb_poids_moins_1 ->setDisabled(checked);
-    ui->pb_poids_moins_01->setDisabled(checked);
+    ui->sb_masse         ->setDisabled(checked);
+    ui->pb_masse_plus_10 ->setDisabled(checked);
+    ui->pb_masse_plus_1  ->setDisabled(checked);
+    ui->pb_masse_plus_01 ->setDisabled(checked);
+    ui->pb_masse_moins_10->setDisabled(checked);
+    ui->pb_masse_moins_1 ->setDisabled(checked);
+    ui->pb_masse_moins_01->setDisabled(checked);
 
     if (checked == true)
     {
-        tunnel->setPoids(201);
+        tunnel->setMasse(201);
     } else {
-        tunnel->setPoids(ui->sb_poids->value());
+        tunnel->setMasse(ui->sb_masse->value());
     }
 }
 
