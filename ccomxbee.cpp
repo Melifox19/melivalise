@@ -5,6 +5,7 @@
 #include <QJsonObject>
 #include <QJsonDocument>
 #include <QRegularExpression>
+#include <QMessageBox>
 
 cComXbee::cComXbee(QObject *parent) : QObject(parent)
 {
@@ -27,6 +28,9 @@ cComXbee::cComXbee(QObject *parent) : QObject(parent)
     }
     else {
         qDebug() << "Serial port open : error";
+        QMessageBox msgBox;
+        msgBox.setText("Ouverture du port série : erreur");
+        msgBox.exec();
     }
 }
 
