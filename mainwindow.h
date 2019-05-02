@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QObject>
+#include "ccomxbee.h"
 
 namespace Ui {
 class MainWindow;
@@ -16,6 +18,8 @@ public:
     ~MainWindow();
 
 private slots:
+    void on_journalisation(const QString &message);
+
     void on_pb_numero_plus_1_released();
 
     void on_pb_numero_moins_1_released();
@@ -112,6 +116,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    cComXbee *comXbee;
 };
 
 #endif // MAINWINDOW_H

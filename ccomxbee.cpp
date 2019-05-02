@@ -31,6 +31,7 @@ cComXbee::cComXbee(QObject *parent) : QObject(parent)
         QMessageBox msgBox;
         msgBox.setText("Ouverture du port série : erreur");
         msgBox.exec();
+        emit sig_journalisation("Erreur");
     }
 }
 

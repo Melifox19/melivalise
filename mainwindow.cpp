@@ -6,11 +6,14 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    // Instanciation de l'objet du terminal série (Xbee)
+    cComXbee comXbee;
+
     ui->setupUi(this);
 
     // Affichage du non support des journaux dans le GUI
-    ui->pte_jounaux->appendPlainText("Pour obtenir les journaux, se référer au terminal.");
-    ui->pte_jounaux->appendPlainText("Cette application ne supporte pas encore les journaux.");
+    //ui->pte_jounaux->appendPlainText("Pour obtenir les journaux, se référer au terminal.");
+    //ui->pte_jounaux->appendPlainText("Cette application ne supporte pas encore les journaux.");
 
     // Affectation des valeurs par celles du tunnel
     ui->sb_numero->setValue(tunnel->getNumero());
@@ -26,11 +29,18 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->gb_autre             ->setStyleSheet("QGroupBox {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #FFFFFF stop: 1 #FFFFFF);border: 2px solid gray;border-radius: 5px;margin-top: 1ex; /* leave space at the top for the title */}");
     ui->gb_temperature       ->setStyleSheet("QGroupBox {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #FFFFFF stop: 1 #FFFFFF);border: 2px solid gray;border-radius: 5px;margin-top: 1ex; /* leave space at the top for the title */}");
     ui->gb_capeurs_defectueux->setStyleSheet("QGroupBox {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #FFFFFF stop: 1 #FFFFFF);border: 2px solid gray;border-radius: 5px;margin-top: 1ex; /* leave space at the top for the title */}");
+
+    connect(&comXbee,SIGNAL(sig_journalisation(const QString &)),this, SLOT(on_journalisation(const QString &)));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::on_journalisation(const QString &message)
+{
+   ui->list_journaux->insertItem(0, message);
 }
 
 /*---------------------------------------------------------------------------*/

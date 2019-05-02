@@ -1323,11 +1323,7 @@
        </attribute>
        <layout class="QGridLayout" name="gridLayout_6">
         <item row="0" column="0">
-         <widget class="QPlainTextEdit" name="pte_jounaux">
-          <property name="readOnly">
-           <bool>true</bool>
-          </property>
-         </widget>
+         <widget class="QListWidget" name="list_journaux"/>
         </item>
        </layout>
       </widget>
