@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "globalobjects.h"
+#include <QDateTime>
 
 MainWindow::MainWindow(cComXbee *comXbee, QWidget *parent) :
     QMainWindow(parent),
@@ -34,7 +35,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_journalisation(const QString &message)
 {
-   ui->list_journaux->insertItem(0, message);
+    QDateTime horrodatage = QDateTime::currentDateTime();
+    QString messageHorrodate = horrodatage.toString("[hh:mm:ss.zzz] ") + message;
+    ui->list_journaux->insertItem(0, messageHorrodate);
 }
 
 /*---------------------------------------------------------------------------*/
