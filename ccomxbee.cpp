@@ -102,6 +102,7 @@ void cComXbee::on_ecrireXbee(QString message)
     QByteArray messageBA;
     messageBA.append(message);
     qDebug() << messageBA;
+    emit sig_journalisation(messageBA);
 
     // Écriture du message dans le port série
     serialPort.write(messageBA);
