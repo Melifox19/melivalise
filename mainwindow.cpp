@@ -8,10 +8,6 @@ MainWindow::MainWindow(cComXbee *comXbee, QWidget *parent) :
 {
     ui->setupUi(this);
 
-    // Affichage du non support des journaux dans le GUI
-    //ui->pte_jounaux->appendPlainText("Pour obtenir les journaux, se référer au terminal.");
-    //ui->pte_jounaux->appendPlainText("Cette application ne supporte pas encore les journaux.");
-
     // Affectation des valeurs par celles du tunnel
     ui->sb_numero->setValue(tunnel->getNumero());
     ui->sb_masse->setValue(tunnel->getMasse());
@@ -27,6 +23,7 @@ MainWindow::MainWindow(cComXbee *comXbee, QWidget *parent) :
     ui->gb_temperature       ->setStyleSheet("QGroupBox {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #FFFFFF stop: 1 #FFFFFF);border: 2px solid gray;border-radius: 5px;margin-top: 1ex; /* leave space at the top for the title */}");
     ui->gb_capeurs_defectueux->setStyleSheet("QGroupBox {background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #FFFFFF stop: 1 #FFFFFF);border: 2px solid gray;border-radius: 5px;margin-top: 1ex; /* leave space at the top for the title */}");
 
+    // Slot pour la journalisation
     connect(comXbee,SIGNAL(sig_journalisation(const QString &)),this, SLOT(on_journalisation(const QString &)));
 }
 
