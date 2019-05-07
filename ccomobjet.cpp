@@ -76,3 +76,13 @@ int cComObjet::getPression()
 {
     return this->pression;
 }
+
+void cComObjet::setVerbosite(int verbosite)
+{
+    this->verbosite = verbosite;
+}
+
+int cComObjet::getVerbosite()
+{
+    return this->verbosite;
+}

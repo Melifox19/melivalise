@@ -9,26 +9,29 @@ class cComObjet : public QObject
 public:
     cComObjet(QObject *parent = nullptr);
 
-    void    setNumero               (int numero);
-    int     getNumero               ();
+    void   setNumero               (int numero);
+    int    getNumero               ();
 
-    void    setMasse                (double masse);
-    double  getMasse                ();
+    void   setMasse                (double masse);
+    double getMasse                ();
 
-    void    setBatterie             (int batterie);
-    int     getBatterie             ();
+    void   setBatterie             (int batterie);
+    int    getBatterie             ();
 
-    void    setInterieurTemperature (double temperature);
-    double  getInterieurTemperature ();
+    void   setInterieurTemperature (double temperature);
+    double getInterieurTemperature ();
 
-    void    setExterieurTemperature (double temperature);
-    double  getExterieurTemperature ();
+    void   setExterieurTemperature (double temperature);
+    double getExterieurTemperature ();
 
-    void    setHumidite             (int humidite);
-    int     getHumidite             ();
+    void   setHumidite             (int humidite);
+    int    getHumidite             ();
 
-    void    setPression             (int pression);
-    int     getPression             ();
+    void   setPression             (int pression);
+    int    getPression             ();
+
+    void   setVerbosite            (int verbosite);
+    int    getVerbosite            ();
 
 
 private:
@@ -40,6 +43,7 @@ private:
     double exterieurTemperature = 25;
     int    humidite             = 90;
     int    pression             = 1015;
+    int    verbosite            = 1;
 };
 
 #endif // COMOBJET_H
