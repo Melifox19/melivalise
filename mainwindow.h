@@ -114,6 +114,12 @@ private slots:
 
     void on_cb_defectueux_temperature_exterieur_clicked(bool checked);
 
+    void on_rb_v_released();
+
+    void on_rb_vv_released();
+
+    void on_rb_vvv_released();
+
 private:
     Ui::MainWindow *ui;
     cComXbee *comXbee;

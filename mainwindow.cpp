@@ -29,7 +29,7 @@ MainWindow::MainWindow(cComXbee *comXbee, QWidget *parent) :
 
     // Mise en place du niveau de verbosité
     // Explication rapide des niveaux de verbosité : 1=faible, 2=modéré, 3=élevé
-    tunnel->setVerbosite("1");
+    tunnel->setVerbosite(1);
     ui->rb_v->setChecked(true);
 }
 
@@ -365,15 +365,15 @@ void MainWindow::on_cb_defectueux_temperature_exterieur_clicked(bool checked)
 // Choix de la verbosité
 void MainWindow::on_rb_v_released()
 {
-    tunnel->setVerbosite("1");
+    tunnel->setVerbosite(1);
 }
 
 void MainWindow::on_rb_vv_released()
 {
-    tunnel->setVerbosite("2");
+    tunnel->setVerbosite(2);
 }
 
 void MainWindow::on_rb_vvv_released()
 {
-    tunnel->setVerbosite("3");
+    tunnel->setVerbosite(3);
 }

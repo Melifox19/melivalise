@@ -39,12 +39,24 @@ void cComXbee::on_lireXbee()
     // Copie de l'entrée du port série dans un buffer
     buffer = serialPort.readAll();
     qDebug() << buffer;
+    if (tunnel->getVerbosite() >= 3)
+    {
+        QString message = "🠔 ";
+        message.append(buffer);
+        emit sig_journalisation(message);
+    }
 
     // Répond le JSON à chaque requête valide
     if (buffer.contains(requestRE))
     {
         QStringRef numeroMeliruche(&buffer, 1,1);
         qDebug() << "Numero Meliruche :" << numeroMeliruche;
+        if (tunnel->getVerbosite() >= 1)
+        {
+            QString message = "🛈 Numéro Méliruche : ";
+            message.append(numeroMeliruche);
+            emit sig_journalisation(message);
+        }
 
         // Réponse uniquement au numéro demandé
         if (numeroMeliruche.toInt() == tunnel->getNumero())
@@ -92,6 +104,11 @@ void cComXbee::on_lireXbee()
         }
     } else { // Réponse si une requete n'est pas considérée comme valide
         qDebug() << "N'est pas une requete";
+        if (tunnel->getVerbosite() >= 2)
+        {
+            QString message = "🛈 N'est pas une requête.";
+            emit sig_journalisation(message);
+        }
     }
 }
 
@@ -101,10 +118,20 @@ void cComXbee::on_ecrireXbee(QString message)
     QByteArray messageBA;
     messageBA.append(message);
     qDebug() << messageBA;
-    emit sig_journalisation(messageBA);
+    if (tunnel->getVerbosite() >= 3)
+    {
+        QString message = "🠖 ";
+        message.append(messageBA);
+        emit sig_journalisation(message);
+    }
 
     // Écriture du message dans le port série
     serialPort.write(messageBA);
+    if (tunnel->getVerbosite() == 1)
+    {
+        QString message = "🛈 Réponse envoyée.";
+        emit sig_journalisation(message);
+    }
 }
 
 void cComXbee::on_error()
